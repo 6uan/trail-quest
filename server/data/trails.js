@@ -13,7 +13,7 @@ const trailData = [
     distanceType: "miles",
     description:
       "A scenic trail through mangroves and along the Oleta River, ideal for both beginner and intermediate runners.",
-    image: "/oleta-river.webp",
+    image: "/images/oleta-river.webp",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const trailData = [
     distanceType: "miles",
     description:
       "A coastal trail with beautiful ocean views, perfect for a relaxed run by the beach.",
-    image: "/virginia-key.webp",
+    image: "/images/virginia-key.webp",
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const trailData = [
     distanceType: "miles",
     description:
       "A lush tropical trail that winds through Crandon Park, offering a mix of paved and unpaved paths.",
-    image: "/crandon-park.webp",
+    image: "/images/crandon-park.webp",
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ const trailData = [
     distanceType: "miles",
     description:
       "A peaceful trail with shaded areas, winding through the hammock and offering great views of the bay.",
-    image: "/matheson-hammock.webp",
+    image: "/images/matheson-hammock.webp",
   },
   {
     id: 5,
@@ -53,7 +53,7 @@ const trailData = [
     distanceType: "miles",
     description:
       "A picturesque trail that runs along the coastline, passing the historic Cape Florida Lighthouse.",
-    image: "/bill-baggs.webp",
+    image: "/images/bill-baggs.webp",
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ const trailData = [
     distanceType: "miles",
     description:
       "A longer, flat trail that runs through the Everglades, perfect for distance runners looking for open space.",
-    image: "/tamiami.webp",
+    image: "/images/tamiami.webp",
   },
   {
     id: 7,
@@ -73,7 +73,7 @@ const trailData = [
     distanceType: "miles",
     description:
       "A family-friendly trail with a mix of paved and off-road sections, offering views of the park’s lakes and green spaces.",
-    image: "/amelia-earhart.webp",
+    image: "/images/amelia-earhart.webp",
   },
   {
     id: 8,
@@ -83,7 +83,7 @@ const trailData = [
     distanceType: "miles",
     description:
       "A scenic and flat loop trail offering sweeping views of the Everglades, ideal for long-distance runners.",
-    image: "/shark-valley.webp",
+    image: "/images/shark-valley.webp",
   },
   // {
   //   id: 9,
@@ -103,7 +103,7 @@ const trailData = [
     distanceType: "miles",
     description:
       "A wooded trail through a beautiful park, offering both paved and unpaved paths for various running levels.",
-    image: "/larry-and-penny.webp",
+    image: "/images/larry-and-penny.webp",
   },
 ];
 

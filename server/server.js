@@ -1,18 +1,22 @@
-import express from 'express';
-import trailsRouter from './routes/trails.js';
+import express from "express";
+import trailsRouter from "./routes/trails.js";
 
 const app = express();
 
-app.use('/public', express.static('public'));
-app.use('/scripts', express.static('scripts'));
-app.use('/trails', trailsRouter);
+app.use("/public", express.static("public"));
+app.use("/scripts", express.static("scripts"));
+app.use("/trails", trailsRouter);
 
-app.get('/', (req, res) => {
-  res.status(200).send('<h1 class="text-align: center; margin-top:50px;">Trail Quest API</h1>');
+app.get("/", (req, res) => {
+  res
+    .status(200)
+    .send(
+      '<h1 class="text-align: center; margin-top:50px;">Trail Quest API</h1>'
+    );
 });
 
 const PORT = process.env.PORT || 3001;
 
-app.listen(PORT, () => {    
-  console.log(`🚀 Server listening on http://localhost:${PORT}`)
+app.listen(PORT, () => {
+  console.log(`🚀 Server listening on http://localhost:${PORT}`);
 });

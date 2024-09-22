@@ -23,6 +23,7 @@ headerLeft.appendChild(headerTitle);
 
 const headerRight = document.createElement("div");
 headerRight.classList.add("header-right");
+// headerRight.classList.add("pico");
 
 const homeButton = document.createElement("button");
 homeButton.classList.add("home-button");

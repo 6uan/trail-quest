@@ -31,6 +31,13 @@ const rendertrails = async () => {
       cardBodyLeft.appendChild(cardBodyLeftText);
       cardBodyLeft.appendChild(tooltip);
 
+      const link = document.createElement("a");
+      link.textContent = "More Info";
+      link.setAttribute("role", "button");
+      link.href = `/trails/${trail.id}`;
+
+      cardBodyLeft.appendChild(link);
+
       const cardBodyRight = document.createElement("div");
       cardBodyRight.classList.add("card-body-right");
 
