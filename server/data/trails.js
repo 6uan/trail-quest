@@ -85,11 +85,11 @@ const trailData = [
   {
     id: 8,
     parkTrailName: "Shark Valley Trail",
-    cityState: "Everglades National Park, FL",
+    cityState: "West Rd, FL",
     distance: 15.0,
     distanceType: "miles",
     description:
-      "A scenic and flat loop trail offering sweeping views of the Everglades, ideal for long-distance runners.",
+      "A scenic and flat loop trail offering sweeping views of the Everglades National Park, ideal for long-distance runners.",
     image: "/images/-shark-valley.webp",
     trailImage: "/images/shark-valley.webp",
   },

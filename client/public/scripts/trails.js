@@ -7,6 +7,11 @@ const rendertrails = async () => {
   if (data) {
     console.log(data);
     data.map((trail) => {
+      const link = document.createElement("a");
+      link.classList.add("card-link");
+      link.setAttribute("role", "button");
+      link.href = `/trails/${trail.id}`;
+
       const card = document.createElement("div");
       card.classList.add("card");
 
@@ -33,14 +38,7 @@ const rendertrails = async () => {
       tooltip.textContent = trail.parkTrailName;
       tooltip.classList.add("tooltip");
 
-      const link = document.createElement("a");
-      link.classList.add("card-link");
-      link.setAttribute("role", "button");
-      link.href = `/trails/${trail.id}`;
-
-      link.appendChild(cardBodyLeftText);
-
-      cardBodyLeft.appendChild(link);
+      cardBodyLeft.appendChild(cardBodyLeftText);
       cardBodyLeft.appendChild(tooltip);
 
       const cardBodyRight = document.createElement("div");
@@ -58,7 +56,9 @@ const rendertrails = async () => {
       card.appendChild(cardImageContainer);
       card.appendChild(cardBody);
 
-      trailCards.appendChild(card);
+      link.appendChild(card);
+
+      trailCards.appendChild(link);
       console.log("card genned");
     });
   } else {
@@ -68,4 +68,10 @@ const rendertrails = async () => {
   }
 };
 
-rendertrails();
+const requestedUrl = window.location.href.split("/").pop();
+
+if (requestedUrl) {
+  window.location.href = "../404.html";
+} else {
+  rendertrails();
+}

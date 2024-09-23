@@ -68,4 +68,10 @@ const rendertrails = async () => {
   }
 };
 
-rendertrails();
+const requestedUrl = window.location.href.split("/").pop();
+
+if (requestedUrl) {
+  window.location.href = "../404.html";
+} else {
+  rendertrails();
+}
