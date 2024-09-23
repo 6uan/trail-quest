@@ -19,7 +19,7 @@ body {
 
 .header {
   width: 100vw;
-  padding: 30px 35px;
+  padding: 30px 40px;
 }
 
 .header-container {
@@ -83,7 +83,7 @@ body {
 }
 
 .grid-container {
-  padding: 35px;
+  padding: 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
@@ -106,7 +106,7 @@ body {
 }
 
 .card-image-container {
-  width: auto;
+  width: 100%;
   height: 260px;
   display: flex;
   justify-content: center;
@@ -215,12 +215,128 @@ body {
   border-top: 2px solid black;
 }
 
-.trail-details {
+.trail-info {
+  padding: 40px 250px;
+  width: 100%;
+  height: 86%;
+}
+
+.trail-body {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  border: 2px solid black;
+}
+
+.top-body {
+  border-bottom: 2px solid black;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.bottom-body {
+  width: 100%;
+  flex-grow: 1; /* Allow bottom-body to fill the remaining height */
+  display: flex;
+  justify-content: start;
+  align-items: stretch;
+}
+
+.bottom-left {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Ensure bottom-left takes up 100% of the bottom-body height */
+  width: 45%;
+}
+
+.bottom-right {
+  border-left: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 55%;
+}
+
+.trail-title {
+  padding-left: 10px;
+  width: 30ch;
+  text-align: left;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.trail-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0;
+  height: 100%;
+}
+
+.trail-description {
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 2.2em;
+  font-weight: lighter;
+}
+
+.info-banner {
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+
+.city-state {
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
-  border: 2px solid red;
+  height: 60px;
+  font-size: 1.5em;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.trail-miles {
+  border-right: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 11ch;
+  height: 60px;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.trail-image-container,
+.image-container {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trail-image-container {
+  border-bottom: 2px solid black;
+  height: 275px;
+}
+
+.image-container {
+  height: 175px;
+}
+
+.trail-image,
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.header-detailed {
+  width: 100vw;
+  padding: 30px 250px;
 }

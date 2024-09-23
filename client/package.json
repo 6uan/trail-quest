@@ -10,7 +10,6 @@
     "sync": "browser-sync start --proxy 'http://localhost:5173' --files 'public/*.html'"
   },
   "devDependencies": {
-    "browser-sync": "^3.0.2",
     "vite": "^5.4.1"
   },
   "dependencies": {
