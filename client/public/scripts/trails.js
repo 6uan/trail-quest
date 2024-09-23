@@ -10,9 +10,14 @@ const rendertrails = async () => {
       const card = document.createElement("div");
       card.classList.add("card");
 
+      const cardImageContainer = document.createElement("div");
+      cardImageContainer.classList.add("card-image-container");
+
       const cardImage = document.createElement("img");
       cardImage.classList.add("card-image");
       cardImage.src = trail.image;
+
+      cardImageContainer.appendChild(cardImage);
 
       const cardBody = document.createElement("div");
       cardBody.classList.add("card-body");
@@ -28,15 +33,15 @@ const rendertrails = async () => {
       tooltip.textContent = trail.parkTrailName;
       tooltip.classList.add("tooltip");
 
-      cardBodyLeft.appendChild(cardBodyLeftText);
-      cardBodyLeft.appendChild(tooltip);
-
       const link = document.createElement("a");
-      link.textContent = "More Info";
+      link.classList.add("card-link");
       link.setAttribute("role", "button");
       link.href = `/trails/${trail.id}`;
 
+      link.appendChild(cardBodyLeftText);
+
       cardBodyLeft.appendChild(link);
+      cardBodyLeft.appendChild(tooltip);
 
       const cardBodyRight = document.createElement("div");
       cardBodyRight.classList.add("card-body-right");
@@ -50,7 +55,7 @@ const rendertrails = async () => {
       cardBody.appendChild(cardBodyLeft);
       cardBody.appendChild(cardBodyRight);
 
-      card.appendChild(cardImage);
+      card.appendChild(cardImageContainer);
       card.appendChild(cardBody);
 
       trailCards.appendChild(card);

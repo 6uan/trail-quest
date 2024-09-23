@@ -6,13 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sync": "browser-sync start --proxy 'http://localhost:5173' --files 'public/*.html'"
   },
   "devDependencies": {
-    "sass": "^1.79.3",
+    "browser-sync": "^3.0.2",
     "vite": "^5.4.1"
   },
   "dependencies": {
-    "@picocss/pico": "^2.0.6"
+    "@picocss/pico": "^2.0.6",
+    "sass": "^1.79.3"
   }
 }

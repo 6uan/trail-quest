@@ -13,7 +13,8 @@ const trailData = [
     distanceType: "miles",
     description:
       "A scenic trail through mangroves and along the Oleta River, ideal for both beginner and intermediate runners.",
-    image: "/images/oleta-river.webp",
+    image: "/images/-oleta-river.webp",
+    trailImage: "/images/oleta-river.webp",
   },
   {
     id: 2,
@@ -23,7 +24,8 @@ const trailData = [
     distanceType: "miles",
     description:
       "A coastal trail with beautiful ocean views, perfect for a relaxed run by the beach.",
-    image: "/images/virginia-key.webp",
+    image: "/images/-virginia-key.webp",
+    trailImage: "/images/virginia-key.webp",
   },
   {
     id: 3,
@@ -33,7 +35,8 @@ const trailData = [
     distanceType: "miles",
     description:
       "A lush tropical trail that winds through Crandon Park, offering a mix of paved and unpaved paths.",
-    image: "/images/crandon-park.webp",
+    image: "/images/-crandon-park.webp",
+    trailImage: "/images/crandon-park.webp",
   },
   {
     id: 4,
@@ -43,7 +46,8 @@ const trailData = [
     distanceType: "miles",
     description:
       "A peaceful trail with shaded areas, winding through the hammock and offering great views of the bay.",
-    image: "/images/matheson-hammock.webp",
+    image: "/images/-matheson-hammock.webp",
+    trailImage: "/images/matheson-hammock.webp",
   },
   {
     id: 5,
@@ -53,7 +57,8 @@ const trailData = [
     distanceType: "miles",
     description:
       "A picturesque trail that runs along the coastline, passing the historic Cape Florida Lighthouse.",
-    image: "/images/bill-baggs.webp",
+    image: "/images/-bill-baggs.webp",
+    trailImage: "/images/bill-baggs.webp",
   },
   {
     id: 6,
@@ -63,7 +68,8 @@ const trailData = [
     distanceType: "miles",
     description:
       "A longer, flat trail that runs through the Everglades, perfect for distance runners looking for open space.",
-    image: "/images/tamiami.webp",
+    image: "/images/-tamiami.webp",
+    trailImage: "/images/tamiami.webp",
   },
   {
     id: 7,
@@ -73,7 +79,8 @@ const trailData = [
     distanceType: "miles",
     description:
       "A family-friendly trail with a mix of paved and off-road sections, offering views of the park’s lakes and green spaces.",
-    image: "/images/amelia-earhart.webp",
+    image: "/images/-amelia-earhart.webp",
+    trailImage: "/images/amelia-earhart.webp",
   },
   {
     id: 8,
@@ -83,27 +90,19 @@ const trailData = [
     distanceType: "miles",
     description:
       "A scenic and flat loop trail offering sweeping views of the Everglades, ideal for long-distance runners.",
-    image: "/images/shark-valley.webp",
+    image: "/images/-shark-valley.webp",
+    trailImage: "/images/shark-valley.webp",
   },
-  // {
-  //   id: 9,
-  //   parkTrailName: "South Pointe Park",
-  //   cityState: "Miami Beach, FL",
-  //   distance: 1.5,
-  //   distanceType: "miles",
-  //   description:
-  //     "A short but scenic run along the southern tip of Miami Beach, offering views of the ocean and downtown Miami.",
-  //   image: "https://example.com/trail9.jpg",
-  // },
   {
-    id: 10,
+    id: 9,
     parkTrailName: "Larry and Penny Thompson Memorial Park",
     cityState: "Miami, FL",
     distance: 5.5,
     distanceType: "miles",
     description:
       "A wooded trail through a beautiful park, offering both paved and unpaved paths for various running levels.",
-    image: "/images/larry-and-penny.webp",
+    image: "/images/-larry-and-penny.webp",
+    trailImage: "/images/larry-and-penny.webp",
   },
 ];
 
