@@ -47,6 +47,9 @@ The web app displays items in a unique format, such as cards rather than lists *
 The user can click on each item in the list to see a detailed view of it, including all database fields
 ![DetailedView](https://github.com/user-attachments/assets/c4dc478d-55d3-4a2a-b6e4-fc1543dcee7d)
 
+unique URL for each detailed view
+![UniqueURL](https://github.com/user-attachments/assets/61ddf00e-8aab-4af8-b5ba-db04412588f4)
+
 The web app serves an appropriate 404 page when no matching route is defined
 ![404Page](https://github.com/user-attachments/assets/8d24a4df-044a-4321-98c1-99c9e0da8b1c)
 
