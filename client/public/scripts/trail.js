@@ -19,7 +19,7 @@ const renderTrail = async () => {
 
     const trailTitle = document.createElement("h2");
     trailTitle.classList.add("trail-title");
-    trailTitle.textContent = trail.parkTrailName;
+    trailTitle.textContent = trail.parktrailname;
     topBody.appendChild(trailTitle);
     trailBody.appendChild(topBody);
 
@@ -34,12 +34,12 @@ const renderTrail = async () => {
     infoBanner.classList.add("info-banner");
     const trailMiles = document.createElement("p");
     trailMiles.classList.add("trail-miles");
-    trailMiles.textContent = `${trail.distance} ${trail.distanceType}`;
+    trailMiles.textContent = `${trail.distance} ${trail.distancetype}`;
     infoBanner.appendChild(trailMiles);
 
     const cityState = document.createElement("p");
     cityState.classList.add("city-state");
-    cityState.textContent = trail.cityState;
+    cityState.textContent = trail.citystate;
     infoBanner.appendChild(cityState);
 
     bottomLeft.appendChild(infoBanner);
@@ -77,7 +77,7 @@ const renderTrail = async () => {
     trailImageContainer.classList.add("trail-image-container");
     const trailImage = document.createElement("img");
     trailImage.classList.add("trail-image");
-    trailImage.src = trail.trailImage;
+    trailImage.src = trail.trailimage;
     trailImageContainer.appendChild(trailImage);
 
     const imageContainer = document.createElement("div");

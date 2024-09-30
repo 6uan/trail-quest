@@ -10,7 +10,7 @@ const createTrailsTable = async () => {
         id SERIAL PRIMARY KEY,
         parkTrailName VARCHAR(255) NOT NULL,
         cityState VARCHAR(255) NOT NULL,
-        distance DECIMAL(5,2) NOT NULL,
+        distance DECIMAL(5,1) NOT NULL,
         distanceType VARCHAR(10) NOT NULL,
         description TEXT NOT NULL,
         directions VARCHAR(255),

@@ -31,11 +31,11 @@ const rendertrails = async () => {
       cardBodyLeft.classList.add("card-body-left");
 
       const cardBodyLeftText = document.createElement("p");
-      cardBodyLeftText.textContent = trail.parkTrailName;
+      cardBodyLeftText.textContent = trail.parktrailname;
       cardBodyLeftText.classList.add("card-body-left-text");
 
       const tooltip = document.createElement("span");
-      tooltip.textContent = trail.parkTrailName;
+      tooltip.textContent = trail.parktrailname;
       tooltip.classList.add("tooltip");
 
       cardBodyLeft.appendChild(cardBodyLeftText);

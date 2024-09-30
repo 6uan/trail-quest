@@ -12,7 +12,7 @@ const trailData = [
     distance: 3.0,
     distanceType: "miles",
     description:
-      "A scenic trail through mangroves and along the Oleta River, ideal for both beginner and intermediate runners.",
+      "A scenic trail through mangroves along the Oleta River, ideal for both beginner and intermediate runners.",
     directions: "https://maps.app.goo.gl/HWhSVY6C85mia4u89",
     image: "/images/-oleta-river.webp",
     trailImage: "/images/oleta-river.webp",
