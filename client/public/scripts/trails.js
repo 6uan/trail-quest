@@ -60,9 +60,13 @@ const renderTrails = (data) => {
       trailCards.appendChild(link);
     });
   } else {
+    const noTrailsContainer = document.createElement("div");
+    noTrailsContainer.classList.add("no-trails-container");
     const noTrails = document.createElement("p");
+    noTrails.classList.add("no-trails");
     noTrails.textContent = "No trails found 🚫🏃‍♂️";
-    trailCards.appendChild(noTrails);
+    noTrailsContainer.appendChild(noTrails);
+    trailCards.appendChild(noTrailsContainer);
   }
 };
 

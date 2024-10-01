@@ -1,5 +1,4 @@
 const renderTrail = async () => {
-  console.log("looking for url");
   const requestedID = parseInt(window.location.href.split("/").pop());
 
   const response = await fetch(`/trails`);
@@ -19,7 +18,7 @@ const renderTrail = async () => {
 
     const trailTitle = document.createElement("h2");
     trailTitle.classList.add("trail-title");
-    trailTitle.textContent = trail.parkTrailName;
+    trailTitle.textContent = trail.parktrailname;
     topBody.appendChild(trailTitle);
     trailBody.appendChild(topBody);
 
@@ -34,23 +33,40 @@ const renderTrail = async () => {
     infoBanner.classList.add("info-banner");
     const trailMiles = document.createElement("p");
     trailMiles.classList.add("trail-miles");
-    trailMiles.textContent = `${trail.distance} ${trail.distanceType}`;
+    trailMiles.textContent = `${trail.distance} ${trail.distancetype}`;
     infoBanner.appendChild(trailMiles);
 
     const cityState = document.createElement("p");
     cityState.classList.add("city-state");
-    cityState.textContent = trail.cityState;
+    cityState.textContent = trail.citystate;
     infoBanner.appendChild(cityState);
 
     bottomLeft.appendChild(infoBanner);
 
     const trailText = document.createElement("div");
     trailText.classList.add("trail-text");
+
     const trailDescription = document.createElement("p");
     trailDescription.classList.add("trail-description");
     trailDescription.textContent = trail.description;
     trailText.appendChild(trailDescription);
     bottomLeft.appendChild(trailText);
+
+    const link = document.createElement("a");
+    link.classList.add("directions-link");
+    link.href = trail.directions;
+    link.target = "_blank";
+
+    const trailDirectionContainer = document.createElement("div");
+    trailDirectionContainer.classList.add("trail-direction-container");
+    const trailDirection = document.createElement("p");
+    trailDirection.classList.add("trail-direction");
+    trailDirection.textContent = "Directions";
+
+    link.appendChild(trailDirection);
+    trailDirectionContainer.appendChild(link);
+    bottomLeft.appendChild(trailDirectionContainer);
+
     bottomBody.appendChild(bottomLeft);
 
     const bottomRight = document.createElement("div");
@@ -60,7 +76,7 @@ const renderTrail = async () => {
     trailImageContainer.classList.add("trail-image-container");
     const trailImage = document.createElement("img");
     trailImage.classList.add("trail-image");
-    trailImage.src = trail.trailImage;
+    trailImage.src = trail.trailimage;
     trailImageContainer.appendChild(trailImage);
 
     const imageContainer = document.createElement("div");
@@ -76,12 +92,6 @@ const renderTrail = async () => {
 
     trailBody.appendChild(bottomBody);
     trailContent.appendChild(trailBody);
-    // document.getElementById("image").src = trail.image;
-    // document.getElementById("trail-name").textContent = trail.parkTrailName;
-    // document.getElementById("city-state").textContent = trail.cityState;
-    // document.getElementById("distance").textContent = trail.distance;
-    // document.getElementById("distance-type").textContent = trail.distanceType;
-    // document.getElementById("description").textContent = trail.description;
   } else {
     const noTrail = document.createElement("p");
     noTrail.textContent = "No trail found 🚫🏃‍♂️";

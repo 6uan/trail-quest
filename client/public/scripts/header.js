@@ -29,15 +29,6 @@ headerRight.classList.add("header-right");
 const searchInput = document.createElement("input");
 searchInput.classList.add("search-input");
 searchInput.placeholder = "Search trails...";
-
-searchInput.addEventListener("input", (e) => {
-  const query = e.target.value;
-
-  // Notify trails.js of the search input change
-  const event = new CustomEvent("searchQueryUpdated", { detail: query });
-  window.dispatchEvent(event);
-});
-
 // REMOVE SEARCH INPUT
 const exitSearch = document.createElement("div");
 exitSearch.classList.add("exit-search");
@@ -45,10 +36,26 @@ exitSearch.classList.add("exit-search");
 const exitSearchImage = document.createElement("img");
 exitSearchImage.classList.add("exit-search-image");
 exitSearchImage.src = "/exit.svg";
+exitSearchImage.style.visibility = "hidden";
+
+searchInput.addEventListener("input", (e) => {
+  const query = e.target.value;
+
+  if (query === "" || query === null) {
+    exitSearchImage.style.visibility = "hidden";
+  } else {
+    exitSearchImage.style.visibility = "visible";
+  }
+
+  // Notify trails.js of the search input change
+  const event = new CustomEvent("searchQueryUpdated", { detail: query });
+  window.dispatchEvent(event);
+});
 
 exitSearch.onclick = () => {
   searchInput.value = "";
   const event = new CustomEvent("searchQueryUpdated", { detail: "" });
+  exitSearchImage.style.visibility = "hidden";
   window.dispatchEvent(event);
 };
 

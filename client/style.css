@@ -129,8 +129,6 @@ body {
   gap: 25px; /* No horizontal gap */
 }
 
-
-
 .card {
   width: 100%;
   height: auto;
@@ -503,4 +501,15 @@ body {
   color: black;
   padding: 0px;
   height: 60px;
+}
+
+.no-trails-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border: 2px solid black;
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 3;
 }
