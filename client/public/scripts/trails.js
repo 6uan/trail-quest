@@ -1,12 +1,11 @@
-const rendertrails = async () => {
-  const response = await fetch("/trails");
-  const data = await response.json();
+const trailCards = document.getElementById("trail-cards");
 
-  const trailCards = document.getElementById("trail-cards");
+// Function to render trails
+const renderTrails = (data) => {
+  trailCards.innerHTML = ""; // Clear existing cards before rendering new ones
 
-  if (data) {
-    console.log(data);
-    data.map((trail) => {
+  if (data && data.length > 0) {
+    data.forEach((trail) => {
       const link = document.createElement("a");
       link.classList.add("card-link");
       link.setAttribute("role", "button");
@@ -59,7 +58,6 @@ const rendertrails = async () => {
       link.appendChild(card);
 
       trailCards.appendChild(link);
-      console.log("card genned");
     });
   } else {
     const noTrails = document.createElement("p");
@@ -68,10 +66,28 @@ const rendertrails = async () => {
   }
 };
 
-const requestedUrl = window.location.href.split("/").pop();
+// Function to fetch trails (either default or filtered)
+const fetchTrails = async (query = "") => {
+  const endpoint = query
+    ? `/trails/search?q=${encodeURIComponent(query)}`
+    : "/trails";
 
+  const response = await fetch(endpoint);
+  const data = await response.json();
+  renderTrails(data); // Render trails with the fetched data
+};
+
+// Event listener for search query updates
+window.addEventListener("searchQueryUpdated", (event) => {
+  const query = event.detail; // The search query passed from header.js
+  console.log("Heard search query:", query);
+  fetchTrails(query); // Fetch filtered trails based on the search query
+});
+
+// Initial fetch of all trails
+const requestedUrl = window.location.href.split("/").pop();
 if (requestedUrl) {
   window.location.href = "../404.html";
 } else {
-  rendertrails();
+  fetchTrails(); // Fetch all trails on page load
 }

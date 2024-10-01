@@ -10,6 +10,11 @@ const router = express.Router();
 
 router.get("/", trailController.getTrails);
 
+
+// Search Functionality
+
+router.get("/search", trailController.searchTrails);
+
 router.get("/:trailId", (req, res) => {
   res.status(200).sendFile(path.resolve(__dirname, "../public/trail.html"));
 });

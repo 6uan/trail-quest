@@ -1,5 +1,4 @@
 const renderTrail = async () => {
-  console.log("looking for url");
   const requestedID = parseInt(window.location.href.split("/").pop());
 
   const response = await fetch(`/trails`);

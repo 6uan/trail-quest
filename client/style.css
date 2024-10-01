@@ -45,6 +45,39 @@ body {
   align-items: center;
 }
 
+.search-input {
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid black;
+  font-size: 1.5em;
+  padding-left: 10px;
+  border-right: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  display: inline-block;
+  font-size: 1.5em;
+}
+
+.exit-search {
+  height: 100%;
+  width: 50px;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding-right: 7px;
+}
+
+.exit-search-image {
+  object-fit: cover;
+  margin-top: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  height: 100%;
+}
+
 .header-image {
   box-sizing: border-box;
   width: 60px;
@@ -95,6 +128,8 @@ body {
   place-items: center;
   gap: 25px; /* No horizontal gap */
 }
+
+
 
 .card {
   width: 100%;

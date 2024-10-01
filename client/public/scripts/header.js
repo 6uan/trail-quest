@@ -25,6 +25,38 @@ const headerRight = document.createElement("div");
 headerRight.classList.add("header-right");
 // headerRight.classList.add("pico");
 
+// SEARCH INPUT
+const searchInput = document.createElement("input");
+searchInput.classList.add("search-input");
+searchInput.placeholder = "Search trails...";
+
+searchInput.addEventListener("input", (e) => {
+  const query = e.target.value;
+
+  // Notify trails.js of the search input change
+  const event = new CustomEvent("searchQueryUpdated", { detail: query });
+  window.dispatchEvent(event);
+});
+
+// REMOVE SEARCH INPUT
+const exitSearch = document.createElement("div");
+exitSearch.classList.add("exit-search");
+
+const exitSearchImage = document.createElement("img");
+exitSearchImage.classList.add("exit-search-image");
+exitSearchImage.src = "/exit.svg";
+
+exitSearch.onclick = () => {
+  searchInput.value = "";
+  const event = new CustomEvent("searchQueryUpdated", { detail: "" });
+  window.dispatchEvent(event);
+};
+
+exitSearch.appendChild(exitSearchImage);
+headerRight.appendChild(searchInput);
+headerRight.appendChild(exitSearch);
+
+// HOME BUTTON
 const homeButton = document.createElement("button");
 homeButton.classList.add("home-button");
 homeButton.textContent = "Home";
